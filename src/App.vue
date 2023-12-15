@@ -1,12 +1,15 @@
 <script>
 import FlixMovies from './components/FlixMovies.vue';
+import FlixSearch from './components/FlixSearch.vue';
 export default{
     components:{
-        FlixMovies
+        FlixMovies,
+        FlixSearch
     }
 }
 </script>
 <template>
+    <FlixSearch/>
     <FlixMovies/>
  
 </template>

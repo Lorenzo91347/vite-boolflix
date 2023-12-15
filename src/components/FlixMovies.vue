@@ -11,7 +11,7 @@ export default{
         console.log('created FlixMovies')
         axios.get(this.store.apiUrl)
         .then((response) => {
-            this.store.movies = response.data
+            this.store.movies = response.data.results
         });
         console.log(this.store.movies)
     }
@@ -19,7 +19,7 @@ export default{
 
 </script>
 <template>
-<ul v-for="item in store.movies.results">
+<ul v-for="item in store.movies">
     <li>{{ item.original_title }}</li>
     <li>{{ item.title }}</li>
     <li>{{ item.original_language }}</li>
