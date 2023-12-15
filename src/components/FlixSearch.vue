@@ -4,6 +4,7 @@ export default{
     data(){
         return{
             store,
+            
         }
     }
 }
@@ -11,9 +12,13 @@ export default{
 <template>
  
 <form >
-    <input type="text" id="" v-model="this.store.MovKey" >
-    <button>Search</button>
-    
+    <input type="text" id="" v-model="store.MovKey" >
+    <button  @click.prevent="$emit('search')">Search</button>
+    <select name="" id="">
+        <option value="">Movies</option>
+        <option value="">Tv Shows</option>
+    </select>
+
 </form>
 </template>
 <style scoped lang="scss"></style>

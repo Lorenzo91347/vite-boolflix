@@ -1,5 +1,4 @@
 <script>
-import axios from 'axios'
 import {store} from '../store'
 export default{
     data(){
@@ -7,14 +6,7 @@ export default{
             store,
         }
     },
-    created(){
-        console.log('created FlixMovies')
-        axios.get(this.store.apiUrl)
-        .then((response) => {
-            this.store.movies = response.data.results
-        });
-        console.log(this.store.movies)
-    }
+    
 }
 
 </script>
