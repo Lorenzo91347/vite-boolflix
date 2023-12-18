@@ -27,9 +27,9 @@ export default{
     <img v-else-if="item.original_language === 'it'" src="https://flagsapi.com/IT/flat/16.png">
     <li v-else>No data Available</li>
     <img :src="'https://image.tmdb.org/t/p/w154/'+ item.poster_path " alt="">
-    <li>{{ getVote(item.vote_average) }}</li>
+    <font-awesome-icon v-for="n in 5" :icon="`${n <= getVote(item.vote_average)? 'fa-solid' : 'fa-regular'} fa-star`" />
 </ul>
-<h2>Tv Shows</h2>
+<h2>Serie</h2>
 <ul v-for="item in store.tvSeries">
     <li>{{ item.original_name }}</li>
     <li>{{ item.name }}</li>
@@ -37,7 +37,7 @@ export default{
     <img v-else-if="item.original_language === 'it'" src="https://flagsapi.com/IT/flat/16.png">
     <li v-else>No data Available</li>
     <img :src="'https://image.tmdb.org/t/p/w154/'+ item.poster_path " alt="">
-    <li v-for="n in getVote(item.vote_average)"><i class="fa-solid fa-star"></i></li>
+    <font-awesome-icon v-for="n in 5" :icon="`${n <= getVote(item.vote_average)? 'fa-solid' : 'fa-regular'} fa-star`" />
 </ul>
 </template>
 <style scoped lang="scss">
