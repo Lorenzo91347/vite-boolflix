@@ -4,21 +4,22 @@ export default{
     data(){
         return{
             store,
-            votes:[],
-            number:''
+            number:'',
         }
     },
     methods: {
         getVote(vote) {
             return Math.ceil(vote / 2 )
-        }
+        },
+        
     }
-  
-           }
+
+}
+
 
 </script>
 <template>
-    <h2> movies</h2>
+    <h2>Movies</h2>
 <ul v-for="item in store.movies">
     <li>{{ item.original_title }}</li>
     <li>{{ item.title }}</li>
@@ -28,7 +29,7 @@ export default{
     <img :src="'https://image.tmdb.org/t/p/w154/'+ item.poster_path " alt="">
     <li>{{ getVote(item.vote_average) }}</li>
 </ul>
-<h2>Tv shows</h2>
+<h2>Tv Shows</h2>
 <ul v-for="item in store.tvSeries">
     <li>{{ item.original_name }}</li>
     <li>{{ item.name }}</li>
@@ -36,7 +37,7 @@ export default{
     <img v-else-if="item.original_language === 'it'" src="https://flagsapi.com/IT/flat/16.png">
     <li v-else>No data Available</li>
     <img :src="'https://image.tmdb.org/t/p/w154/'+ item.poster_path " alt="">
-    <li>{{ getVote(item.vote_average) }}</li>
+    <li v-for="n in getVote(item.vote_average)"><i class="fa-solid fa-star"></i></li>
 </ul>
 </template>
 <style scoped lang="scss">
