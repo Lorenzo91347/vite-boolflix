@@ -1,5 +1,7 @@
 import {reactive} from 'vue';
 
+// Variable containing the v-model variable,empty arrays to populate with Api calls,and Api URL components
+
 export const store = reactive({
     SearchKey:``,
     movies:[],

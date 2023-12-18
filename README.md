@@ -1,7 +1,8 @@
-# Vue 3 + Vite
+# Boolflix(in progress)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The Idea behind this project is to create a movie database using the TMDB Open Api,to render a list of movies and Tv series 
+based on your search.
 
-## Recommended IDE Setup
+At the moment it strictly includes the bare functioning components,thanks to Axios Api calls and methods native to Vue.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Developed with Vue and Vite(Node.js),see the .drawio file attached for a diagram.
