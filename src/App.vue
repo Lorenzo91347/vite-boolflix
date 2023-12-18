@@ -11,13 +11,16 @@ export default{
     },
     methods:{
         search(){
-        axios.get(this.store.apiUrlMain + this.store.MovKey)
-        .then((response) => {
-            this.store.movies = response.data.results
+            axios.get(this.store.ApiMov + this.store.ApiKey + this.store.SearchKey  )
+            .then((response) => {
+                this.store.movies = response.data.results
         });
-        axios
-    },
-
+        axios.get(this.store.ApiTv + this.store.ApiKey + this.store.SearchKey  )
+            .then((response) => {
+                this.store.tvSeries = response.data.results
+        });
+        
+    }
     },
     created(){
        this.search()
